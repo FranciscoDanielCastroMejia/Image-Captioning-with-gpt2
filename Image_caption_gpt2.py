@@ -1,9 +1,3 @@
-#from utility import  get_inference_model, generate_caption
-#import json
-#import tensorflow as tf
-#import argparse
-#from settings_inference import *
-#import keras
 import os
 import spacy 
 import numpy as np
