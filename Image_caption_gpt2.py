@@ -123,7 +123,7 @@ for filename in os.listdir(folder_path):
         print("PREDICT CAPTION : %s" %(CAPTION))
         text = CAPTION
         prueba = image_classification2(text)
-        print("Link: {}".format(prueba.link))
+        print("URL/PATH: {}".format(filepath))
         print("Adjetivos: {}".format(prueba.adj))
         print("Objetos: {}".format(prueba.noun))
         print("Verbos: {}".format(prueba.verb))
@@ -136,16 +136,3 @@ for filename in os.listdir(folder_path):
         print()
         print()
 
-
-"""
-#  Image media display
-from IPython.display import display
-
-# Loading URLs
-url = "/media/mitos/E054078554075DA2/TESIS PROGRAMS FINAL/IMAGE CAPTIONING ViT/imagenesprueba/niñosjugando.jpg"
-# Display Image
-display(load_image(url))
-
-# Display Caption
-CAPTION = get_caption(model, image_processor, tokenizer, url)
-print("CAPTION: {}".format(CAPTION))"""
