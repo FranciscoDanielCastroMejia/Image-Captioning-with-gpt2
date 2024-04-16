@@ -101,7 +101,7 @@ def image_classification2(Text):
         elif word.pos_ == "VERB":
             verb = np.append(verb,word.text)
             
-    link = "www.netflix.com"        
+    link = ""        
     final_image = image_pos(link, adj, noun, verb)                  
     return(final_image)
 
@@ -123,7 +123,8 @@ for filename in os.listdir(folder_path):
         print("PREDICT CAPTION : %s" %(CAPTION))
         text = CAPTION
         prueba = image_classification2(text)
-        print("URL/PATH: {}".format(filepath))
+        prueba.link = filepath
+        print("URL/PATH: {}".format(prueba.link))
         print("Adjetivos: {}".format(prueba.adj))
         print("Objetos: {}".format(prueba.noun))
         print("Verbos: {}".format(prueba.verb))
